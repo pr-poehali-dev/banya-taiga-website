@@ -10,10 +10,10 @@ export default function Index() {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `linear-gradient(rgba(139, 69, 19, 0.4), rgba(47, 79, 47, 0.4)), url('/img/4dc7531b-ab45-4c8e-adf2-a3076272cfc2.jpg')`
+            backgroundImage: `linear-gradient(rgba(139, 69, 19, 0.4), rgba(47, 79, 47, 0.4)), url('/img/ae1981dc-4863-4481-971c-75419315813b.jpg')`
           }}
         />
-        <div className="relative z-10 text-center text-white px-4">
+        <div className="relative z-10 text-center text-white px-4 fade-in">
           <h1 className="text-6xl md:text-8xl font-bold mb-6 animate-fade-in">
             ТАЙГА
           </h1>
@@ -274,8 +274,8 @@ export default function Index() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="relative overflow-hidden rounded-lg group">
               <img 
-                src="/img/4fd6a3a0-9e8f-4aa6-b3ab-ac948b20e6f9.jpg" 
-                alt="Интерьер бани" 
+                src="/img/ae6de41a-57d7-40f0-9fcc-ed609011b9e8.jpg" 
+                alt="Интерьер русской бани" 
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -288,31 +288,153 @@ export default function Index() {
 
             <div className="relative overflow-hidden rounded-lg group">
               <img 
-                src="/img/912d12c3-bb91-4ee7-b0c3-93178d278440.jpg" 
+                src="/img/4a43770f-78d6-4fa1-b4ed-d020bee56265.jpg" 
                 alt="Банные принадлежности" 
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-4 left-4 text-white">
                   <h3 className="text-lg font-semibold">Традиции</h3>
-                  <p className="text-sm opacity-90">Натуральные веники и мед</p>
+                  <p className="text-sm opacity-90">Веники, мед, травяные настои</p>
                 </div>
               </div>
             </div>
 
             <div className="relative overflow-hidden rounded-lg group">
               <img 
-                src="https://cdn.poehali.dev/files/eecce39d-974c-431f-8a95-2e20a37b4e3f.jpg" 
-                alt="Деревянная текстура" 
+                src="/img/ae1981dc-4863-4481-971c-75419315813b.jpg" 
+                alt="Банный комплекс зимой" 
                 className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-4 left-4 text-white">
-                  <h3 className="text-lg font-semibold">Материалы</h3>
-                  <p className="text-sm opacity-90">Натуральное дерево</p>
+                  <h3 className="text-lg font-semibold">Экстерьер</h3>
+                  <p className="text-sm opacity-90">Традиционная архитектура</p>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+              Тарифы
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              Выберите подходящий пакет услуг
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="relative group hover:shadow-xl transition-all duration-300">
+              <CardHeader className="text-center">
+                <CardTitle className="text-2xl mb-2">Классик</CardTitle>
+                <div className="text-4xl font-bold text-primary mb-4">2 500 ₽</div>
+                <CardDescription>За 2 часа / группа до 6 человек</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-3">
+                  <li className="flex items-center gap-2">
+                    <Icon name="Check" size={16} className="text-primary flex-shrink-0" />
+                    <span>Русская парная</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Icon name="Check" size={16} className="text-primary flex-shrink-0" />
+                    <span>Березовые веники</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Icon name="Check" size={16} className="text-primary flex-shrink-0" />
+                    <span>Комната отдыха</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Icon name="Check" size={16} className="text-primary flex-shrink-0" />
+                    <span>Травяной чай</span>
+                  </li>
+                </ul>
+                <Button className="w-full mt-6 bg-primary hover:bg-primary/90">
+                  Забронировать
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="relative group hover:shadow-xl transition-all duration-300 ring-2 ring-primary">
+              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-semibold">
+                  Популярный
+                </span>
+              </div>
+              <CardHeader className="text-center">
+                <CardTitle className="text-2xl mb-2">Премиум</CardTitle>
+                <div className="text-4xl font-bold text-primary mb-4">4 500 ₽</div>
+                <CardDescription>За 3 часа / группа до 8 человек</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-3">
+                  <li className="flex items-center gap-2">
+                    <Icon name="Check" size={16} className="text-primary flex-shrink-0" />
+                    <span>Все из пакета "Классик"</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Icon name="Check" size={16} className="text-primary flex-shrink-0" />
+                    <span>Купель с холодной водой</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Icon name="Check" size={16} className="text-primary flex-shrink-0" />
+                    <span>Массаж вениками</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Icon name="Check" size={16} className="text-primary flex-shrink-0" />
+                    <span>Мед и варенье</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Icon name="Check" size={16} className="text-primary flex-shrink-0" />
+                    <span>Халаты и тапочки</span>
+                  </li>
+                </ul>
+                <Button className="w-full mt-6 bg-primary hover:bg-primary/90">
+                  Забронировать
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="relative group hover:shadow-xl transition-all duration-300">
+              <CardHeader className="text-center">
+                <CardTitle className="text-2xl mb-2">VIP</CardTitle>
+                <div className="text-4xl font-bold text-primary mb-4">7 500 ₽</div>
+                <CardDescription>За 4 часа / группа до 10 человек</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-3">
+                  <li className="flex items-center gap-2">
+                    <Icon name="Check" size={16} className="text-primary flex-shrink-0" />
+                    <span>Все из пакета "Премиум"</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Icon name="Check" size={16} className="text-primary flex-shrink-0" />
+                    <span>Персональный банщик</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Icon name="Check" size={16} className="text-primary flex-shrink-0" />
+                    <span>Эксклюзивные настои</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Icon name="Check" size={16} className="text-primary flex-shrink-0" />
+                    <span>Банкетное обслуживание</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Icon name="Check" size={16} className="text-primary flex-shrink-0" />
+                    <span>Бассейн с подогревом</span>
+                  </li>
+                </ul>
+                <Button className="w-full mt-6 bg-primary hover:bg-primary/90">
+                  Забронировать
+                </Button>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -330,7 +452,7 @@ export default function Index() {
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <div className="flex items-center justify-center gap-3">
               <Icon name="Phone" size={24} />
-              <span className="text-lg">+7 (123) 456-78-90</span>
+              <span className="text-lg">+7 (495) 123-45-67</span>
             </div>
             <div className="flex items-center justify-center gap-3">
               <Icon name="Clock" size={24} />
@@ -338,28 +460,68 @@ export default function Index() {
             </div>
             <div className="flex items-center justify-center gap-3">
               <Icon name="MapPin" size={24} />
-              <span className="text-lg">г. Москва, ул. Таежная, 1</span>
+              <span className="text-lg">Московская область</span>
             </div>
           </div>
 
-          <Button 
-            size="lg" 
-            variant="secondary" 
-            className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 px-12 py-4 text-lg font-semibold"
-          >
-            Забронировать время
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button 
+              size="lg" 
+              variant="secondary" 
+              className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 px-8 py-4 text-lg font-semibold"
+            >
+              Забронировать время
+            </Button>
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary px-8 py-4 text-lg font-semibold"
+            >
+              Задать вопрос
+            </Button>
+          </div>
         </div>
       </section>
 
       {/* Footer */}
       <footer className="bg-foreground text-background py-12">
-        <div className="max-w-6xl mx-auto px-4 text-center">
-          <h3 className="text-3xl font-bold mb-4">ТАЙГА</h3>
-          <p className="text-lg opacity-80 mb-6">Традиционный русский банный комплекс</p>
-          <p className="opacity-60">
-            © 2024 Банный комплекс "Тайга". Все права защищены.
-          </p>
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid md:grid-cols-4 gap-8 mb-8">
+            <div>
+              <h3 className="text-2xl font-bold mb-4">ТАЙГА</h3>
+              <p className="opacity-80">
+                Традиционный русский банный комплекс с многолетней историей
+              </p>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Услуги</h4>
+              <ul className="space-y-2 opacity-80">
+                <li>Русская баня</li>
+                <li>Массаж вениками</li>
+                <li>Купель</li>
+                <li>Чайная церемония</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Контакты</h4>
+              <ul className="space-y-2 opacity-80">
+                <li>+7 (495) 123-45-67</li>
+                <li>info@taiga-banya.ru</li>
+                <li>Московская область</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Режим работы</h4>
+              <ul className="space-y-2 opacity-80">
+                <li>Понедельник - Воскресенье</li>
+                <li>10:00 - 22:00</li>
+                <li>Без выходных</li>
+              </ul>
+            </div>
+          </div>
+          <div className="border-t border-background/20 pt-8 text-center opacity-60">
+            <p>© 2024 Банный комплекс "Тайга". Все права защищены.</p>
+          </div>
         </div>
       </footer>
     </div>
